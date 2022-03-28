@@ -1,8 +1,13 @@
-# Sprint06
-Gestion de stock en PHP
-Create,Read,Update,Delete
+# VAP FACTORY (Sprint 6)
 
-28/03/2022 19h25
- Il manque le Read qui n'est pas implémenté !
- Il faudrait rajouter une condition sur le PHP pour enlever la possibilité d'envoyer une valeur négative au stock via le formulaire
- Il manque toujours le CSS
+Le Sprint 6 est une gestion de stock de type **CRUD** (**C**reate **R**ead **U**pdate **D**elete)
+Pour ouvrir le site il suffira de vous rendre sur le lien ci dessous:
+[blablatest](https://www.google.com/)
+
+Si vous souhaitez utiliser le dépôts git, il vous faudra modifier le fichier config et y mettre vos identifiants d'hébergeur, il faudra également créer une base de donnée ayant une table "stock".
+
+
+28/03/2022:
+-Il faudrait rajouter la page "Read" qui n'est pas tout a fait finie
+-Faire le CSS
+-Eventuellement empêcher la saisie de chiffre négatif dans le formulaire
