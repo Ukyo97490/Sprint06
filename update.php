@@ -41,7 +41,8 @@ while($stock_data = mysqli_fetch_array($result))
 ?>
 <html>
 <head>
-	<title>Edit User Data</title>
+<link rel="stylesheet" href="style.css">
+	<title>VAP Factory:Modifier un produit</title>
 </head>
 
 <body>

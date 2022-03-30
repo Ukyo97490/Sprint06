@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Add Users</title>
+	<title>VAP Factory:Ajouter un produit</title>
 </head>
 
 <body>

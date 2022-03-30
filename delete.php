@@ -1,13 +1,13 @@
 <?php
-// include database connection file
+// On se connecte a la BDD
 include_once("config.php");
 
-// Get id from URL to delete that user
+// On récupère l'ID via l'URL
 $id = $_GET['id'];
 
-// Delete user row from table based on given id
-$result = mysqli_query($mysqli, "DELETE FROM users WHERE id=$id");
+// On supprime le produit en fonction de l'ID
+$result = mysqli_query($mysqli, "DELETE FROM stock WHERE id=$id");
 
-// After delete redirect to Home, so that latest user list will be displayed.
+// Après la suppression on retourne sur index
 header("Location:index.php");
 ?>
