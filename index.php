@@ -8,6 +8,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM stock ORDER BY id DESC");
 
 <html>
 <head>
+<link rel="icon" href="vape.png">
     <!-- Le link de fichier css ne fonctionnant pas on trouve une méthode alternative via un fichier php où l'on écrit le script css -->
 <?php include("style.php") ?>
     <title>VAP Factory: Le Stock</title>
@@ -41,11 +42,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM stock ORDER BY id DESC");
         echo "<tr>";
         echo "<td>".$stock_data['ref']."</td>";
         echo "<td>".$stock_data['nom']."</td>";
-        echo "<td>".$stock_data['about']."</td>";
+        echo "<td>".substr($stock_data['about'], 0,40). "..."."</td>";
         echo "<td>".$stock_data['prix_achat']."€"."</td>";
         echo "<td>".$stock_data['prix_revente']." €"."</td>";
         echo "<td>".$stock_data['quantite']."</td>";
-        echo "<td><a href='update.php?id=$stock_data[id]'>Editer</a> | <td><a href='read.php?id=$stock_data[id]'>Voir</a> | <a href='delete.php?id=$stock_data[id]'>Supprimer</a></td></tr>";
+        echo "<td><a href='update.php?id=$stock_data[id]'>✏</a> | <a href='read.php?id=$stock_data[id]'>🔍</a> | <a href='delete.php?id=$stock_data[id]'>❌</a></td></tr>";
     }
     ?>
     </table>

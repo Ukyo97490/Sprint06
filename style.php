@@ -1,3 +1,4 @@
+
 <style type="text/css">
     *{margin:auto;
     padding:0;
@@ -82,23 +83,39 @@ tr:nth-child(odd){
         color:white;
         padding-bottom:10px;
     }
+
+
     .footer-card{
         width:360px;
         background-color:#fdc500;
         border-bottom-left-radius:5px;
         border-bottom-right-radius:5px;
-        
+        margin-bottom:50px;
     }
+
+
+    .description p{
+        color:#edf2fb;
+    }
+
+
     .footer-card a{
 text-decoration:none;
 display:block;
 text-align: center;
 color:#00296b;
     }
+    .footer-card a:hover{
+        color:#0f8b8d;
+    }
+
+
+
     .footer-card:hover{
  transform: scale(1.2);
         transition:1s;
         box-shadow:1px 5px 2px 1px #cca43b;
+
     }
   
 

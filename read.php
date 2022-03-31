@@ -40,7 +40,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
         }
     }
      
-    // Close statement
+    // On ferme
     mysqli_stmt_close($stmt);
     
     // Close connection
@@ -54,6 +54,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<link rel="icon" href="vape.png">
 <?php include("style.php") ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,15 +69,12 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
 <div class="card">
     <H2 class="productitle"><?php echo $nom;?></H2>
     <strong>REF:</strong> <?php echo $ref;?></p>
-    <strong>Prix d'achat:</strong> <?php echo $prix_achat."€" ;?><br/>
-    <strong>Prix revente :</strong> <?php echo $prix_revente."€" ;?><br/>
+    <strong>Prix d'achat:</strong> <?php echo number_format($prix_achat,2)."€" ;?><br/>
+    <strong>Prix revente :</strong> <?php echo number_format($prix_revente,2)."€" ;?><br/>
     <strong>Quantité en stock :</strong><?php echo $quantite;?>
-    <h4>Description :</h4><?php echo $about;?>
-    <br/>
-    </div>
-
-    <div class="footer-card"><a href="index.php">Revenir a la page de stock</a></div>
+    <h4>Description :</h4><div class="description"><?php echo $about;?></div>
+    <br/></div>
+        <div class="footer-card"><a href="index.php"><strong>Revenir a la page de stock</strong></a></div>
 </div>   
-    <!-- <p><a href="index.php">Revenir a la page de stock</a> -->
 </body>
 </html>

@@ -1,5 +1,7 @@
 <html>
 <head>
+<link rel="icon" href="vape.png">
+<?php include("style.php") ?>
 	<title>VAP Factory:Ajouter un produit</title>
 </head>
 
@@ -8,34 +10,24 @@
 	<br/><br/>
 
 	<form action="create.php" method="post" name="form1">
-		<table width="25%" border="0">
-			<tr>
-				<td>Référence:</td>
-				<td><input type="text" name="ref"></td>
-			</tr>
-			<tr>
-				<td>Nom du produit:</td>
-				<td><input type="text" name="nom"></td>
-			</tr>
-			<tr>
-				<td>Description:</td>
-				<td><input type="text" name="about"></td>
-			</tr>
-			<tr>
-				<td>Prix d'achat:</td>
-				<td><input type="number"  step="0.01"  name="prix_achat"></td>
-			</tr>
-			<tr>
-				<td>Prix de revente:</td>
-				<td><input type="number"  step="0.01" name="prix_revente"></td>
-			</tr>
-			<tr>
-				<td>Quantité:</td>
-				<td><input type="number" name="quantite"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" name="Submit" value="Ajouter"></td>
+	<form>
+	<label for="ref">Référence:</label><br />
+	 <input name="ref" type="text"  /> <br /> 
+	 <label for="nom">Nom du produit:</label><br />
+	 <input name="nom" type="text" /> <br /> 
+	 <label for="about">Description:</label><br /> 
+	<textarea name="about" cols="50" rows="5"></textarea><br /> 
+	<input  type="textarea">
+   <nom>demande</nom>
+   <libellé>formulez votre demande</libellé>
+</input>
+	<label for="prix_achat">Prix d'achat:</label><br /> 
+	<input type="number"  step="0.01"  name="prix_achat" /> <br /> 
+	<label for="prix_revente">Prix de revente:</label><br /> 
+	<input type="number"  step="0.01" name="prix_revente"/> <br /> 		
+	<label for="quantite">Quantité:</label><br />
+				<input type="number" name="quantite"><br /> 
+				<input type="submit" name="Submit" value="Ajouter">
 			</tr>
 		</table>
 	</form>
@@ -44,12 +36,12 @@
 
 	// Si le formulaire est soumis alors on insère les données dans la table stock.
 	if(isset($_POST['Submit'])) {
-		$ref = $_POST['ref'];
-		$nom = $_POST['nom'];
-		$about = $_POST['about'];
-		$prix_achat = $_POST['prix_achat'];
-		$prix_revente = $_POST['prix_revente'];
-		$quantite = $_POST['quantite'];
+		$ref =htmlspecialchars(strip_tags( $_POST['ref']));
+		$nom =htmlspecialchars( strip_tags($_POST['nom']));
+		$about = htmlspecialchars( strip_tags($_POST['about']));
+		$prix_achat = htmlspecialchars( strip_tags($_POST['prix_achat']));
+		$prix_revente = htmlspecialchars( strip_tags($_POST['prix_revente']));
+		$quantite = htmlspecialchars( strip_tags($_POST['quantite']));
 
 		// On inclus le fichier de config pour la connexion a la BDD
 		include_once("config.php");
