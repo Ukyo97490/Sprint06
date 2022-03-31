@@ -14,20 +14,27 @@ $result = mysqli_query($mysqli, "SELECT * FROM stock ORDER BY id DESC");
 </head>
 
 <body>
-    <div class="header">
-        <div class="nav"><form>
-    <a href="create.php">
-        <input type="button" value="Ajouter un produit">
-    </a>
-</form></div>
+ 
+<div class="header"></div>
+        <div class="nav">
+            
+            <div class="bouton-nav-head">
+                <a href="index.php">Accueil</a>
+                </div>
+    
+                <div class="bouton-nav-head" >
+                    <a href="create.php" >Ajouter un produit</a>
+                    </div>
+    
+        </div>
     </div>
 
 
-    <table width='80%' border=1>
+    <table>
 
-    <tr>
+    <thead>
         <th>Référence</th> <th>Nom</th> <th>Description</th> <th>Prix d'achat</th><th>Prix de revente</th><th>Quantité</th>
-    </tr>
+    </thead>
     <?php
 
     while($stock_data = mysqli_fetch_array($result)) {

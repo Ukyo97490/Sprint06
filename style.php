@@ -1,13 +1,113 @@
 <style type="text/css">
-body {
-font: 16px "Carnivalee Freakshow"; margin: auto; position: relative; width: 900px; height: auto; background-color:#e0e1dd; }
-.header {
- margin: auto; margin-left: 20px; height:100px; width: 643px; float:left;
-background-color:#778da9; }
-#boite2 {
-position: relative; margin-left: 20px; height: 28px; width: 323px; float:left;
-background-image: url(images/bottom2.png); }
-#footer {
-font-size: 11px Arial, sans-serif; line-height: 14px; position: relative; width: 900px; height: 80px;
-background-image: url(images/piedpage.png) no-repeat center; }
+    *{margin:auto;
+    padding:0;
+   
+}
+body{
+    background-color:#caf0f8;
+  
+}
+
+.header{
+    width:1200px;
+    height: 250px;
+    background-color:#023e8a;
+}
+.nav{
+    width:1200px;
+    height:50px;
+    background-color:#0077b6;
+    display: flex;
+}
+.bouton-nav-head{
+    margin-left: 20%;
+    width:200px;
+    height:50px;
+    background-color:#014f86;
+}
+    .bouton-nav-head:hover{
+ 
+        background-color:#90e0ef;
+        border-radius: 5px;
+        border-color: black;
+        transform: scale(1.2);
+        transition:1s;
+     }   
+.container{
+    width:1200px;
+}
+    
+
+.bouton-nav-head a{
+    width:100%;
+    height:100%;
+    text-decoration: none;
+    font-size: 20px;
+    color: azure;
+    display:block;
+    text-align: center;
+    line-height: 50px;
+
+}
+.bouton-nav-head a:hover{
+    color:black;
+    font-size: 22px;
+}
+ table{
+     width:1200px;
+     margin-top:50px;
+ }
+thead th{
+    background-color:#468faf;
+}
+tr{
+    background-color: #61a5c2;
+}
+
+tr:nth-child(odd){
+    background-color: #89c2d9;
+}
+
+
+.card {
+    background-color:#0077b6;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    width:300px;
+    margin-top:50px;
+    padding:30px;
+}
+    
+.productitle {
+        color:white;
+        padding-bottom:10px;
+    }
+    .footer-card{
+        width:360px;
+        background-color:#fdc500;
+        border-bottom-left-radius:5px;
+        border-bottom-right-radius:5px;
+        
+    }
+    .footer-card a{
+text-decoration:none;
+display:block;
+text-align: center;
+color:#00296b;
+    }
+    .footer-card:hover{
+ transform: scale(1.2);
+        transition:1s;
+        box-shadow:1px 5px 2px 1px #cca43b;
+    }
+  
+
+
+h1{
+    color:#023e8a;
+}
+h4{
+    margin-top:10px;
+    margin-bottom:5px;
+}
 </style>

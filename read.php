@@ -62,17 +62,21 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
 
 </head>
 <body>
-    <div class="card">
-    <h1>Détails du produit</h1>
-    <H2 class="lol"><?php echo $nom;?></H2>
-    <p>REF : <?php echo $ref;?></p>
-    <p>Produit :<?php echo $about;?></p>
-    <p>Prix d'achat: : <?php echo $prix_achat."€" ;?></p>
-    <p>Prix : <?php echo $prix_revente."€" ;?></p>
-    <p>Nombre :<?php echo $quantite;?></p>
+ <div class="container">
+<h1>Fiche produit</h1>
+    
+<div class="card">
+    <H2 class="productitle"><?php echo $nom;?></H2>
+    <strong>REF:</strong> <?php echo $ref;?></p>
+    <strong>Prix d'achat:</strong> <?php echo $prix_achat."€" ;?><br/>
+    <strong>Prix revente :</strong> <?php echo $prix_revente."€" ;?><br/>
+    <strong>Quantité en stock :</strong><?php echo $quantite;?>
+    <h4>Description :</h4><?php echo $about;?>
     <br/>
-    <p><a href="index.php">Revenir a la page de stock</a>
-</div>
+    </div>
+
+    <div class="footer-card"><a href="index.php">Revenir a la page de stock</a></div>
+</div>   
     <!-- <p><a href="index.php">Revenir a la page de stock</a> -->
 </body>
 </html>

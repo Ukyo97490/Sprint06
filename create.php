@@ -23,11 +23,11 @@
 			</tr>
 			<tr>
 				<td>Prix d'achat:</td>
-				<td><input type="text" name="prix_achat"></td>
+				<td><input type="number"  step="0.01"  name="prix_achat"></td>
 			</tr>
 			<tr>
 				<td>Prix de revente:</td>
-				<td><input type="text" name="prix_revente"></td>
+				<td><input type="number"  step="0.01" name="prix_revente"></td>
 			</tr>
 			<tr>
 				<td>Quantité:</td>
