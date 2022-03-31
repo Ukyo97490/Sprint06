@@ -6,32 +6,45 @@
 </head>
 
 <body>
-	<a href="index.php">Retourner au stock !</a>
-	<br/><br/>
+	<div class="container">
+<h1>Ajouter un produit</h1>
+<div id="home"><a class="home" href="index.php">🏡 Retourner au stock !</a></div>
+	
 
-	<form action="create.php" method="post" name="form1">
-	<form>
-	<label for="ref">Référence:</label><br />
-	 <input name="ref" type="text"  /> <br /> 
-	 <label for="nom">Nom du produit:</label><br />
-	 <input name="nom" type="text" /> <br /> 
-	 <label for="about">Description:</label><br /> 
-	<textarea name="about" cols="50" rows="5"></textarea><br /> 
-	<input  type="textarea">
-   <nom>demande</nom>
-   <libellé>formulez votre demande</libellé>
-</input>
-	<label for="prix_achat">Prix d'achat:</label><br /> 
-	<input type="number"  step="0.01"  name="prix_achat" /> <br /> 
-	<label for="prix_revente">Prix de revente:</label><br /> 
-	<input type="number"  step="0.01" name="prix_revente"/> <br /> 		
-	<label for="quantite">Quantité:</label><br />
-				<input type="number" name="quantite"><br /> 
-				<input type="submit" name="Submit" value="Ajouter">
+	<form class="create" action="create.php" method="post" name="form1">
+		<table>
+			<tr>
+				<td><strong>Référence:</strong></td>
+				<td><input class="formlenght" type="text" name="ref"></td>
+			</tr>
+			<tr>
+				<td><strong>Nom du produit:</strong></td>
+				<td><input class="formlenght" type="text" name="nom"></td>
+			</tr>
+			<tr>
+				<td><strong>Description:</strong></td>
+				<td><textarea class="formtextarea" id="about" name="about"
+          rows="5" cols="33"></textarea></td>
+			</tr>
+			<tr>
+				<td><strong>Prix d'achat:</strong></td>
+				<td><input class="formlenght" type="number"  step="0.01"  name="prix_achat"></td>
+			</tr>
+			<tr>
+				<td><strong>Prix de revente:</strong></td>
+				<td><input class="formlenght" type="number"  step="0.01" name="prix_revente"></td>
+			</tr>
+			<tr>
+				<td><strong>Quantité:</strong></td>
+				<td><input class="formlenght" type="number" name="quantite"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><center><input class="submit-create" type="submit" name="Submit" value="Ajouter"></center></td>
 			</tr>
 		</table>
 	</form>
-
+</div>
 	<?php
 
 	// Si le formulaire est soumis alors on insère les données dans la table stock.
@@ -50,8 +63,8 @@
 		$result = mysqli_query($mysqli, "INSERT INTO stock(ref,nom,about,prix_achat,prix_revente,quantite) VALUES('$ref','$nom','$about','$prix_achat','$prix_revente','$quantite')");
 
 		// On retourne un message de validation
-		echo "L'article a été créé. <a href='index.php'>Voir le Stock</a>";
+		echo "L'article a été créé. <a href='index.php'>🏡 Retourner au stock !</a>";
 	}
-	?>
+	?></div>
 </body>
 </html>

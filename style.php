@@ -8,11 +8,25 @@ body{
     background-color:#caf0f8;
   
 }
+#home{
+    width:1200px;
+    margin-top:50px;
+    margin-bottom:-20;
+    font-weight:bold;
+}
+.home{
+text-decoration:none;
+color:#00296b;
+}
+.home:hover{
+text-decoration:none;
+color:#0466c8;
+}
 
 .header{
     width:1200px;
     height: 250px;
-    background-color:#023e8a;
+    background-image:url("header.png");
 }
 .nav{
     width:1200px;
@@ -57,6 +71,7 @@ body{
  table{
      width:1200px;
      margin-top:50px;
+     
  }
 thead th{
     background-color:#468faf;
@@ -123,8 +138,52 @@ color:#00296b;
 h1{
     color:#023e8a;
 }
+.subtitle{
+    color:#0077b6;
+    font-weight:bold;
+}
+.subtitle-name{
+    color:#ff8800;
+    font-weight:bold;
+}
 h4{
     margin-top:10px;
     margin-bottom:5px;
 }
+
+.create{
+    margin-top:50px;
+    width:1200px;
+    
+}
+.formlenght{
+    height:30px;
+    width:600px;
+}
+.formtextarea{
+    width:600px;
+    height:100px;
+}
+.submit-create{
+    margin:5px;
+    width:200px;
+    height:50px;
+    color:#00296b;
+    font-weight:bold;
+    background-color:#fdc500;
+}
+.submit-create:hover{
+    width:200px;
+    height:50px;
+    font-weight:bold;
+    color:#0f8b8d;
+    background-color:#fdc500;
+    transform: scale(1.2);
+        transition:1s;
+        box-shadow:5px 5px 1px 0px #cca43b;
+}
+
+input:focus, textarea:focus {
+ background-color:#fbf8cc;
+ }
 </style>

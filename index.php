@@ -40,15 +40,18 @@ $result = mysqli_query($mysqli, "SELECT * FROM stock ORDER BY id DESC");
 
     while($stock_data = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<td>".$stock_data['ref']."</td>";
+        echo "<td>"."<strong>".$stock_data['ref']."<strong>"."</td>";
         echo "<td>".$stock_data['nom']."</td>";
         echo "<td>".substr($stock_data['about'], 0,40). "..."."</td>";
-        echo "<td>".$stock_data['prix_achat']."€"."</td>";
-        echo "<td>".$stock_data['prix_revente']." €"."</td>";
-        echo "<td>".$stock_data['quantite']."</td>";
-        echo "<td><a href='update.php?id=$stock_data[id]'>✏</a> | <a href='read.php?id=$stock_data[id]'>🔍</a> | <a href='delete.php?id=$stock_data[id]'>❌</a></td></tr>";
+        echo "<td>"."<center>".$stock_data['prix_achat']."€"."</center>"."</td>";
+        echo "<td>"."<center>".$stock_data['prix_revente']." €"."</center>"."</td>";
+        echo "<td>"."<center>".$stock_data['quantite']."</center>"."</td>";
+        echo "<td><a href='update.php?id=$stock_data[id]'>🖋</a> | <a href='read.php?id=$stock_data[id]'>🔍</a> | <a  href='delete.php?id=$stock_data[id]'>❌</a></td></tr>";
     }
     ?>
+    <script type="text/javascript">
+
+        </script>
     </table>
 </body>
 </html>
